@@ -13,11 +13,13 @@ public class CachePool1 {
         System.out.println(service);
         for(int i=0;i<2;i++){
             service.execute(()->{
+
                 try {
                     TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+
                 System.out.println(Thread.currentThread().getName());
             });
         }
